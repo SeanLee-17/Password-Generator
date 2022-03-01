@@ -38,7 +38,7 @@ function writePassword() {
     }
 
     if(specialChar) {
-      isChosenOne=isChosenOne.concat(isSpecialCharacters)
+      isChosenOne=isChosenOne.concat(isSpecialCharaters)
     }
 
     if(numericChar) {
