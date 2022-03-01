@@ -34,7 +34,7 @@ function writePassword() {
     }
 
     if(lowercaseChar) {
-      isChosenOne=isChosenOne.concat(lowercaseChar)
+      isChosenOne=isChosenOne.concat(isLowercase)
     }
 
     if(specialChar) {
