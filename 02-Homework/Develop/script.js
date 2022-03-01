@@ -38,11 +38,11 @@ function writePassword() {
     }
 
     if(specialChar) {
-      isChosenOne=isChosenOne.concat(specialChar)
+      isChosenOne=isChosenOne.concat(isSpecialCharacters)
     }
 
     if(numericChar) {
-      isChosenOne=isChosenOne.concat(numericChar)
+      isChosenOne=isChosenOne.concat(isNumeric)
     }
     
     console.log(isChosenOne)
