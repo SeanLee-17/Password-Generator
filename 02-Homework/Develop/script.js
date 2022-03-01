@@ -1,10 +1,10 @@
 var generateBtn = document.querySelector("#generate");
 
-function generator {
+function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector('#password');
 
-  passwordText.value = password
+  passwordText.textContent = password;
 
 }
 
@@ -21,36 +21,38 @@ function generator {
     if (+passwordLength<8||+passwordLength>128) {
       alert("You must select a number between 8 and 128");
 
-      return
+      return generatePassword;
     }
+
     var capitolChar = confirm("Do you want capitols in your password?");
     var lowercaseChar = confirm("Do you want lowercases in your password?");
     var specialChar = confirm("Do you want special characters in your password?");
     var numericChar = confirm("Do you want numbers in your password?");
 
-    if (capitolChar) {
-      isChosenOne=isChosenOne.concat(capitolChar)
+    if(capitolChar) {
+      isChosenOne=isChosenOne.concat(isCapitol)
     }
 
-    if (lowercaseChar) {
+    if(lowercaseChar) {
       isChosenOne=isChosenOne.concat(lowercaseChar)
     }
 
-    if (specialChar) {
+    if(specialChar) {
       isChosenOne=isChosenOne.concat(specialChar)
     }
 
-    if (numericChar) {
+    if(numericChar) {
       isChosenOne=isChosenOne.concat(numericChar)
     }
-
+    
+    console.log(isChosenOne)
     for (var i = 0; i < parseInt(passwordLength); i++) {
       var randomIndex = Math.floor(Math.random()*isChosenOne.length);
-      password+=isChosenOne[randomIndex]
+      password += isChosenOne[randomIndex]
+      console.log(password)
     }
+
   return password;
 };
 
 generateBtn.addEventListener("click", writePassword);
-
-
